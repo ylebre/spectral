@@ -8,20 +8,20 @@
 		"menu": [],
 		"meta title": "Spectral by HTML5 UP",
 		"homelink": {
-			"href": "index.html",
-			"innerHTML": "Spectral"
+			"innerHTML": "Spectral",
+			"href": "index.html"
 		},
 		"banner title": "Simply edit&nbsp;Spectral",
 		"banner description": "Another fine responsive<br>\n\t\t\t\t\t\t\tsite template freebie<br>\n\t\t\t\t\t\t\tcrafted by <a href=\"http://html5up.net\">HTML5 UP</a>.",
 		"banner button": {
-			"href": "#vedor-edit",
-			"class": "button special",
-			"innerHTML": "Edit me!"
+			"innerHTML": "Edit me!",
+			"href": "#simply-edit",
+			"class": "button special"
 		},
 		"banner link": {
+			"innerHTML": "Learn More",
 			"href": "#one",
-			"class": "more scrolly",
-			"innerHTML": "Learn More"
+			"class": "more scrolly"
 		},
 		"section one title": "Arcu aliquet vel lobortis ata nisl<br>\n\t\t\t\t\t\t\t\teget augue amet aliquet nisl cep donec",
 		"section one description": "Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br>\n\t\t\t\t\t\t\t\tfringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.",
