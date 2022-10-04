@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mayur Bhise::Portfolio Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="icon" href="images/favicon.ico">
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Mayur Bhise</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="index.html#projects">Projects</a></li>
+											<li><a href="index.html#about">About</a></li>
+											<li><a href="index.html#contact">Contact</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>General Adverserial Networks</h2>
+							<h4>Super Resolution GAN</h4>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<div class="row">
+
+									<div class="6u 12u$(medium)">
+										<h3>About the Project</h3>
+                    								<p>Shifting and Image from High to Low Resolution istermed as Super resolution. Earlier, it was done using bicubic-interpolation, CNNs, and then GANs wereimplemented; which caused an increase in the quality of theimage produced. GANs consist of two models; a generatorwhich produces images from random noise when trained;and a discriminator which determines whether the generated image is fake or not. The task of upscaling lies with theCNN RESnet. The objective is achieved when there is a 0.5 probability for discriminating between the generated and the original image. The GAN is a type supervised learning algorithm which is trained to be able to successfully generate unseen upscaled images. In our SRGAN model, weused a VGG19 network to assist in the discriminator's loss score. The VGG19 is a network developed by a group at OXFORD where they pretrained an image classification network on the ImageNet dataset. Using the VGG19 network helps to decrease the time it takes to train the discriminator network as it has help from a pre-trained model.</p>
+										<p>The use of computer vision, and CNNs has skyrocketed over the past few decades, especially for image classification. For this project, I demonstrated the use of CNNs and GAN for upscaling images from low resolution to High resolution, the upscaling can be used in many applications such as for upscaling old footage, medical footage, satellite imaging</p>
+									</div>
+
+									<div class="6u$ 12u$(medium)">
+										<span class="image right"><img src="images/srgan.jpg" alt="SRGAN architecture" /></span>
+									</div>
+
+								</div>
+
+								<hr />
+
+								<!-- <div class="inner"> -->
+									<h3 align="left">Skills Involved</h3>
+									<ul>
+										<li align="left">OpenCV</li>
+										<li align="left">Computer Vision</li>
+										<li align="left">GAN</li>
+										<li align="left">keras and pytorch</li>
+										<li align="left">Image processing</li>
+										<li align="left">Neural Networks</li>
+										<li align="left">Camera stabilization techniques</li>
+										<!-- <li align="left">C++</li> -->
+									</ul>
+								<!-- </div> -->
+
+								<hr />
+
+								<h3 align="left">Procedure</h3>
+
+								<!-- <div class="inner"> -->
+									<p>The images were extracted from the publicly available dataset div2k which has 25 thousand images for training, the images were of random size, so first steps were to preprocess the images and convert them in an uniform size of 64*64 and the create a ImageDatasetGenerator using keras library, the architecture of the network was deep for a GAN network because the network had to learn low level features to generate features while upsacling, the architecture consisted of resnets with skip connection to avoid vanishing gradient</p>
+									<p>The GAN network mostly comprised of convolution layers, batch normalization and parameterized ReLU (PRelU). <span class="image right"><img src="images/srgan_map.png" alt="SRGAN architecture" /></span>The generator also implements skip connections similar to ResNet. The convolution layer with “k3n64s1” stands for 3x3 kernel filters outputting 64 channels with stride 1.</p>
+									<ul>
+										<li align="left">16 residual blocks in generator network</li>
+										<li align="left">output size of 256*256</li>
+										<li align="left">learning rate - 0.0001</li>
+										<li align="left">epochs 4000</li>
+									</ul>
+								<!-- </div> -->
+
+								<div class="row">
+									<div class="6u 12u$(medium)">
+										<p>The results were achieved using the following hardware specs:24 Core CPU, 256GB RAM, Nvidia 3080 GPU. Using thetwo hyperparameters setups mentioned in the previoussection we were able to produce the following two images.The original low resolution input image is shown on thright. This image is a 128 x 128 pixel image with a gaussianblur applied. On the right we have our generated imagesfrom our two models. The first generated image shown inthe middle is a 512 x 512 pixel image generated by ourmodel that ran with 750 epochs and batch size of 8. The second generated image shown on the bottom far right, usedthe hyperparameters of 4000 epochs with a batch size of 1</p>
+										<p>While the results relied mostly on objective reasoning, webelieve that both of our implementations were able toaccomplish our goal successfully. We were able to produceimages that had 4 times the pixel count as the input imagewhile also restoring resolution to be comparable to theoriginal image. Some of the observations we notice with thefirst generated image in the middle is that the model wasable to smooth out edges and make them sharper as seen inthe shoulder, nose and hat regions. One thing this modelmissed was replicating the same color space. As seen in the picture, the color appears dull with less contrast. Our secondmodel on the bottom right performed better on this image</p>
+									</div>
+
+									<div class="6u$ 12u$(medium)">
+										<span class="image fit"><img src="images/resuts.jpg" alt="Results" /></span>
+										<span class="image fit"><img src="images/metrics.jpg" alt="metrics" /></span>
+									</div>
+								</div>
+
+
+								<hr />
+
+								<h3>Learn More</h3>
+
+								<p>This was my final project for <b><a href="https://wl11gp.neu.edu/udcprod8/bwckctlg.p_disp_course_detail?cat_term_in=201630&subj_code_in=EECE&crse_numb_in=5644" target="blank" > EECE 5644: Pattern Recognition and Machine Learning</a></b> at Northeastern. The original paper for the SRGAN implementation is <b><a href="https://arxiv.org/abs/1609.04802" target="blank"</a></b> The <b><a href="https://github.com/leftthomas/SRGAN/blob/master/README.md" target="blank" > README</a></b> should contain all necessary information for SRGAN in pytorch by th author</p>
+
+							</div>
+						</section>
+					</article>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://github.com/mayb1998/" target="blank" class="icon fa-github fa-lg"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mayur-bhise" target="blank" class="icon fa-linkedin fa-lg"><span class="label">Email</span></a></li>
+							<li><a href="mailto:bhise.m@northeastern.edu" class="icon fa-envelope-o fa-lg"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Template: <a href="https://html5up.net/spectral"> SPECTRAL</a></li><li>From: <a href="http://html5up.net">HTML5 UP</a></li>						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

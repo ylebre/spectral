@@ -1,20 +1,28 @@
 <!DOCTYPE HTML>
 <!--
-	Spectral by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	TODO:
+		5. project page 
+		6. background pic 
+
+	PROJECTS TO ADD:
+
 -->
-<html>
+
+<!-- <html> -->
+<html prefix="og: http://ogp.me/ns#">
 	<head>
-		<title data-simply-field="meta title">Spectral by HTML5 UP</title>
+		<title>Mayur Bhise::Portfolio Website</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Spectral by HTML5 UP">
-		<meta name="author" content="n33co">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="icon" href="images/favicon.ico">
+		<meta property="og:title" content="Mayur Bhise::Portfolio Website" />
+	  <meta property="og:description" content="Robotics Projects Portfolio Website" />
+	  <meta property="og:url" content="https://mayB1998.github.io" />
+	  <meta property="og:image" content="images/porfolio_banner.png" />
 	</head>
 	<body class="landing">
 
@@ -23,16 +31,17 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html" data-simply-field="homelink">Spectral</a></h1>
+						<h1><a href="index.html">Mayur Bhise</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
-										<ul data-simply-list="menu" data-simply-sortable>
-											<template>
-												<li><a href="index.html" data-simply-field="link">Home</a></li>
-											</template>
+										<ul>
+											<li><a href="#">Home</a></li>
+											<li><a href="#projects" class="more scrolly">Projects</a></li>
+											<li><a href="#about" class="more scrolly">About</a></li>
+											<li><a href="#contact" class="more scrolly">Contact</a></li>
 										</ul>
 									</div>
 								</li>
@@ -43,117 +52,198 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2 data-simply-field="banner title" data-simply-type="text">Spectral</h2>
-							<p data-simply-field="banner description">Another fine responsive<br />
-							site template freebie<br />
-							crafted by <a href="http://html5up.net">HTML5 UP</a>.</p>
-							<ul class="actions">
-								<li><a href="#" class="button special" data-simply-field="banner button">Activate</a></li>
-							</ul>
+							<h2>Mayur Bhise</h2>
+							<p>MS in Robotics Candidate<br />
+							Northeastern University</p>
+							<!-- <ul class="actions"> -->
+								<!-- <li><a href="#" class="button special">Make this button do something!</a></li> -->
+							<!-- </ul> -->
 						</div>
-						<a href="#one" class="more scrolly" data-simply-field="banner link">Learn More</a>
+						<a href="#projects" class="more scrolly">View Projects</a>
 					</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
+
+				<!-- projects -->
+					<section id="projects" class="wrapper alt style2">
+
+						<section class="spotlight">
+							<div class="image"><a href="VSLAM.html"><img src="images/Vslam.gif" alt="Autonomy" /></a></div>
+							<div class="content">
+								<h2><a href="VSLAM.html">Autonomous Navigation</a></h2>
+								<p>As Autonomous Vehicles Navigate throught the enironment, they rely on Sensors, as their eyes to percieve the surrounding, We have implemed Visual Slam on the NUANCE car at the university to able to plan a trajectory throught its planned path.</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><a href="GAN.html"><img src="images/GAN.gif" alt="SRGAN" /></a></div><div class="content">
+								<h2><a href="GAN.html">Super Resolution GAN</a></h2>
+								<p>As the field of Computer vision advances, impossibles are becoming possible, here we developed a GAN to upscale image natively in low-resolution, which has application in Satellite/Medical imaging, Recovering old footages, Reconaissance. </p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><a href="compviz.html"><img src="images/liv_por.gif" alt="Computer Vision" /></a></div>
+							<div class="content">
+								<h2><a href="compviz.html">Computer Vision</a></h2>
+								<p>Advanced computer vision algorithms are one of the key technologies enabling today's robotic breakthroughs. As the applications for robots grow in both number and complexity, many of the core challenges will be related to sensing and perception, fields I'm profoundly interested in!</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><a href="mlai.html"><img src="images/mlai.gif" alt="MLAI mini projects" /></a></div>
+							<div class="content">
+								<h2><a href="mlai.html">Machine Learning &amp; AI for Robotics</a></h2>
+								<p>A series of mini-projects whose competencies are at the core of autonomy, planning, localization, and the dynamic aspects of machines. Projects include Bayesian filtering, Machine Learning techniques, Artificial Intelligence algorithms, and the role each plays in modern robotics.</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><a href="GRASP.html"><img src="images/grasp.jpg" alt="Baxter" /></a></div>
+							<div class="content">
+								<h2><a href="grasp.html">GRASP</a></h2>
+									<p>Writing is a major issue for people with motor control issues, regular pens do not aid their writing posture, here we have designed a detachable attachment to provide perfect holding posture along with realtime feeback.</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><a href="advancedcontrol.html"><img src="images/control.png" alt="Soft Robotics" /></a></div>
+							<div class="content">
+								<h2><a href="advancedcontrol.html">Advanced Control for Soft Robotics</a></h2>
+								<p>Traditional "stiff" robots are easy to control, but difficult to integrate into normal human environments due to safety concerns. Soft robots are much safer, but difficult to control. The goal of this project is to explore and implement a cutting-edge soft control algorithm on a special robotic arm prototype.</p>
+							</div>
+						</section>
+
+
+
+					</section>
+
+
+					<section id="about" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2 data-simply-field="section one title">Arcu aliquet vel lobortis ata nisl<br />
-								eget augue amet aliquet nisl cep donec</h2>
-								<p data-simply-field="section one description">Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<div class="row">
+									<div class="6u 12u$(medium)">
+										<h2>Interests</h2>
+										<ul>
+											<li>Autonomy</li>
+											<li>Localization &amp; Planning</li>
+											<li>Computer Vision</li>
+											<li>Machine Learning</li>
+											<li>Artificial Intelligence</li>
+											<li>Dynamic System Modeling</li>
+											<li>Human/Machine Interaction</li>
+											<li>Embedded Systems</li>
+											<li>Algorithm Development</li>
+											<li>New Technologies</li>
+											<li>Renewables</li>
+											<li>Open Source</li>
+										</ul>
+									</div>
+									<div class="6u$ 12u$(medium)">
+										<h2>About</h2>
+											<p align="left">Currently pursuing my MS in Robotics at Northeastern University, I intend to focus on areas such as localization and planning, machine learning, AI, computer vision, deep learning - essentially everything a robot needs to navigate its environment. I hope to combine my mechanical expertise with the skills and concepts learned in this program to rapidly advance the exciting field of autonomy and control. I believe my creativity, enthusiasm for the field, and maker mentality will be assets to any team I join in the future.</p>
+											<p align="right"><b>-Mayur</b></p>
+									</div>
+								</div>
+
+								<hr />
+								
+							<p align="left"><b>Want to learn more?</b> Check out my <a href="https://www.linkedin.com/in/mayur-bhise" target="blank">LinkedIn profile</a>, download my <a href="resume.pdf" target="blank">résumé</a>, or send me an <a href="mailto:bhise.m@northeastern.edu">e-mail</a> using the links below.</p>
+
 							</header>
-							<ul class="icons major" data-simply-list="section one icons" data-simply-sortable>
-								<template>
-									<li data-simply-field="icon"><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
-								</template>
-								<template data-vedor-template="Heart">
-									<li data-vedor-field="icon"><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
-								</template>
-								<template data-vedor-template="Code">
-									<li data-vedor-field="icon"><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
-								</template>
+							<ul class="icons major">
+								<li><a href="https://www.linkedin.com/in/mayur-bhise" target="blank" class="icon fa-linkedin-square fa-3x"><span class="label">LinkedIn</span></a></li>
+								<li><a href="resume.pdf" target="blank" class="icon fa-file-pdf-o fa-3x"><span class="label">Resume</span></a></li>
+								<li><a href="mailto:bhise.m@northeastern.edu" class="icon fa-envelope-o fa-3x"><span class="label">Email</span></a></li>
 							</ul>
 						</div>
 					</section>
 
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2" data-simply-list="section two spotlight" data-simply-sortable>
-						<template>
-							<section class="spotlight">
-								<div class="image"><img data-simply-field="image" src="images/pic01.jpg" alt="" /></div><div class="content">
-									<h2 data-simply-field="title">Magna primis lobortis<br />
-									sed ullamcorper</h2>
-									<p data-simply-field="description">Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-								</div>
-							</section>
-						</template>
-					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2 data-simply-field="section three title">Accumsan mus tortor nunc aliquet</h2>
-								<p data-simply-field="section three description">Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
+					<!-- <section id="three" class="wrapper style3 special"> -->
+						<!-- <div class="inner"> -->
+							<!-- <header class="major"> -->
+								<!-- <h2>Accumsan mus tortor nunc aliquet</h2>
+								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
 								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-							</header>
-							<ul class="features" data-simply-list="section three features" data-simply-sortable>
-								<template data-simply-template="Plane">
-									<li class="icon fa-paper-plane-o">
-										<h3 data-simply-field="title">Arcu accumsan</h3>
-										<p data-simply-field="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-									</li>
-								</template>
-								<template data-simply-template="Laptop">
-									<li class="icon fa-laptop">
-										<h3 data-simply-field="title">Arcu accumsan</h3>
-										<p data-simply-field="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-									</li>
-								</template>
+							</header> -->
+							<!-- <ul class="features">
+								<li class="icon fa-paper-plane-o">
+									<h3>Arcu accumsan</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								</li>
+								<li class="icon fa-laptop">
+									<h3>Ac Augue Eget</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								</li>
+								<li class="icon fa-code">
+									<h3>Mus Scelerisque</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								</li>
+								<li class="icon fa-headphones">
+									<h3>Mauris Imperdiet</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								</li>
+								<li class="icon fa-heart-o">
+									<h3>Aenean Primis</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								</li>
+								<li class="icon fa-flag-o">
+									<h3>Tortor Ut</h3>
+									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								</li>
 							</ul>
+						</div>
+					</section> -->
+
+
+				<!-- contact -->
+					<section id="contact" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>Contact</h2>
+								<p>To get the conversation started, use the form below (or, if you'd rather, send me an email or message me on LinkedIn). Feel free to contact me about career opportunities, relevant events such as conventions or conferences, or volunteer opportunities!</p>
+								<!-- <h4>Contact Form</h4> -->
+								<form method="POST" action="https://formspree.io/f/xknpbgrv">
+									<div class="row uniform">
+										<div class="6u 12u$(xsmall)">
+											<input type="text" name="name" id="name" value="" placeholder="Name" />
+										</div>
+										<div class="6u$ 12u$(xsmall)">
+											<input type="email" name="email" id="email" value="" placeholder="Email Address" />
+										</div>
+										<div class="6u$ 12u$(small)">
+											<input type="checkbox" id="ishuman" name="ishuman" unchecked>
+											<label for="ishuman">Not a robot</label>
+										</div>
+										<div class="12u$">
+											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<div class="12u$">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="special" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</header>
 						</div>
 					</section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2 data-simply-field="cta title">Arcue ut vel commodo</h2>
-								<p data-simply-field="cta description">Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions vertical" data-simply-list="cta actions" data-simply-sortable>
-								<template data-simply-template="Special">
-									<li><a href="#" class="button fit special" data-simply-field="link">Activate</a></li>
-								</template>
-								<template data-simply-template="Normal">
-									<li><a href="#" class="button fit" data-simply-field="link">Learn More</a></li>
-								</template>
-							</ul>
-						</div>
-					</section>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons" data-simply-list="footer icons" data-simply-sortable>
-							<template data-simply-template="Twitter">
-								<li><a data-simply-field="link" href="#" class="icon fa-twitter"><span class="label" data-simply-field="label">Twitter</span></a></li>
-							</template>
-							<template data-simply-template="Facebook">
-								<li><a data-simply-field="link" href="#" class="icon fa-facebook"><span class="label" data-simply-field="label">Facebook</span></a></li>
-							</template>
-							<template data-simply-template="Instagram">
-								<li><a data-simply-field="link" href="#" class="icon fa-instagram"><span class="label" data-simply-field="label">Instagram</span></a></li>
-							</template>
-							<template data-simply-template="Dribbble">
-								<li><a data-simply-field="link" href="#" class="icon fa-dribbble"><span class="label" data-simply-field="label">Dribbble</span></a></li>
-							</template>
-							<template data-simply-template="Email">
-								<li><a data-simply-field="link" href="#" class="icon fa-envelope-o"><span class="label" data-simply-field="label">Email</span></a></li>
-							</template>
+						<ul class="icons">
+							<li><a href="https://github.com/mayB1998/" target="blank" class="icon fa-github fa-lg"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mayur-bhise" target="blank" class="icon fa-linkedin fa-lg"><span class="label">Email</span></a></li>
+							<li><a href="mailto:bhise.m@northeastern.edu" class="icon fa-envelope-o fa-lg"><span class="label">Email</span></a></li>
+							<!-- <li><a href="#" class="icon fa-youtube-play"><span class="label">YouTube</span></a></li> -->
+							<!-- <li><a href="#" class="icon fa-file-pdf-o"><span class="label">Resume</span></a></li> -->
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>Template: <a href="https://html5up.net/spectral"> SPECTRAL</a></li><li>From: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
@@ -167,6 +257,6 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.simplyedit.io/1/simply-edit.js" data-api-key="github"></script>
+
 	</body>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mayur Bhise::Portfolio Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Mayur Bhise</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="index.html#projects">Projects</a></li>
+											<li><a href="index.html#about">About</a></li>
+											<li><a href="index.html#contact">Contact</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Autonomous Navigation</h2>
+							<h4>using NUANCE Autonomous Vehicle</h4>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<div class="row">
+									<div class="6u 12u$(medium)">
+										<h3>About the Project</h3>
+
+										<p>I've always been interested in autonomous navigation, localization, and Planning, so I seized the opportunity as our Field Robotics Lab had a Autonomous Car<b><a href="https://fieldroboticslab.ece.northeastern.edu/autonomous-car/" target="blank" > Northeastern Robotics</a></b>. This also proved a great opportunity to experiment with Visual Odometry, localization, feature Detectors, pointcloud processing, something that has fascinated me since the beginning of its use in autonomous vehicles.</p>
+
+										<h4>Hardware used:</h4>
+										<ul>
+											<li><b><a href="https://fieldroboticslab.ece.northeastern.edu/autonomous-car/" target="blank" > NUANCE Autonomous Car</a></b></li>
+											<li><b><a href="http://velodynelidar.com/vlp-16.html" target="blank" > Velodyne VLP-16 LIDAR</a></b></li>
+											<li><b><a href="https://www.flir.com/products/blackfly-gige/?vertical=machine+vision&segment=iis" target="blank" > 5 pointgray BlackflyS 5MP cameras</a></b></li>
+										</ul>
+									</div>
+
+									<div class="6u$ 12u$(medium)">
+											<span class="image fit"><img src="images/autonomousCar.jpg" alt="NUANCE AUTONOMOUS CAR" /></span>
+									</div>
+
+								</div>
+
+								<hr />
+
+								<h3 align="left">Skills Involved</h3>
+								<ul>
+									<li align="left">ROS Navigation Stack, ROS plugins</li>
+									<li align="left">C++ &amp; Python for real-time embedded control</li>
+									<li align="left">Motion planning &amp; Visual Odometry</li>
+									<!-- <li align="left">Control algorithms</li> -->
+									<li align="left">Laser/LIDAR data handling</li>
+									<li align="left">Machine perception</li>
+									<li align="left"><b><a href="http://pointclouds.org/" target="blank" > PCL (Point Cloud Library)</a></b></li>
+									<li align="left">Pointcloud filtering</li>
+									<li align="left"><b><a href="http://gazebosim.org/" target="blank" > Gazebo</a></b>, <b><a href="http://wiki.ros.org/rviz" target="blank" > RViz</a></b></li>
+									<li align="left">Wireless network issue debugging</li>
+									<li align="left">Troubleshooting real robot hardware</li>
+								</ul>
+
+								<hr />
+
+								<div class="inner">
+
+									<h3>Procedure</h3>
+
+									<h4>First Steps</h4>
+									<p>The initial system setup for any project was to setup the car for collecting data using ROS on linux platform, where I collected the data for the nodes required for performing visual slam, and then I drove the car around an approximate circle in the BOSTON City area to get a loop closure, which are really important to get acccurate maps of the environment without any scale drift.</p>
+									<p>The data collected was preprocessed and extracted to get raw images for the Visual slam case, then I created a visual odometry pipeline in python using various feature descriptors such as ORB, FAST, SIFT and compared the performance for all of htem, first with the publicly available KITTI dataset and then with the real data collected</p>
+									<p>The pipeline performed well with the KITTI Dataset, because it was collected in ideal conditions without any other moving objects, but when I ran it on the dataset I collected it broke several times areas where the vehicle stopped at traffic stops and other cars were moving at relatively different speeds comapred to us, so I had to implement some heuristics to get it perform well, so I used Gaussian Filtering, image cropping whent he vehicle is stationary to avoid the moving vehicles, which gave satisfactory results <span class="image left"><img src="images/vslam.jpg" alt="navigating an obstacle" /></span></p>
+
+									<h4>SLAM &amp; Autonomous Navigation</h4>
+									
+									
+									<p><span class="image right"><img src="images/cropping.jpg" alt="Heuristics &amp; Gaussian Filtering" /></span>The images had to be filtered and cropped a various points where the vehicle was stationary, the road had to be cropped for feature detetion so that it cannot take any erranoues movements into account, the video here shows the implementation after applying the heuristics</p>
+									<p><div class="VO-video"><video src="images/videoplayback.mp4" autoplay controls loop></video></div>The video shows that the vehicle trajectory is now stable when it is stationary, after that I built the ORB-SLAM3 library to work on the data, where the trajetectory was breaking a lot in between, but after some backend optimization it was good to go and detect a loop closure as intended</p>
+								        <h4>LiDAR</h4>
+									<p>Lightweight and ground optimized lidar odometry and mapping system for ROS compatible UGVs (used on NUance car for our project). The system takes point cloud data from a VLP-16 Lidar and outputs 6D pose estimation in real-time. The proposed system seeks to improve efficiency and accuracy for ground vehicles while vastly reducing computation time to preceding LOAM applications and for practical robotic applications., the lego loam library was performing well better than the orbslam3 which indicated that visual slam needed a lot more optimization than lidar based techniques<span class="image right"><img src="images/legoloam.png" alt="localization" /></span></p>
+
+
+
+									<h4>Results &amp; Conclusion</h4>
+									<p>Navigation worked surprisingly well for a single-quarter project, but there were many aspects that could have been improved. A known issue with the current software which needs a lot of backend optimization for it to run on real time data, Stereo VO suffers when the features are too far away. The depth estimate for these points is not correct and thus triangulation fails, VO cannot be directly used in real-world systems without any corrective measures or backend optimization, VSLAM can be a very good system if tuned properly and with a proper frontend and backend, Though in featureless areas, such as off-road scenarios, the applications are limited.Orb SLAM 3 while being a really good system, breaks often on sharp turns which is still a open problem.</p>
+                                                                        <p>LegoLOAM without much optimization is a more robust library to be used on real time data for SLAM applications</p>
+
+								</div>
+
+								<hr />
+
+								<h3>Learn More</h3>
+
+								<p> The software is freely available as a ROS package at <b><a href="https://github.com/UZ-SLAMLab/ORB_SLAM3" target="blank" > https://github.com/UZ-SLAMLab/ORB_SLAM3/blob/master/README.md" target="blank" > README</a></b> for LEgo LOAM the following links to the repository for the library which has detailed info on how to interface it with your data<b><a href="https://github.com/RobustFieldAutonomyLab/LeGO-LOAM" target="blank" > https://github.com/RobustFieldAutonomyLab/LeGO-LOAM/blob/master/README.md" target="blank" > README</a></b></p>
+
+							</div>
+						</section>
+					</article>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://github.com/mayb1998/" target="blank" class="icon fa-github fa-lg"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mayur-bhise" target="blank" class="icon fa-linkedin fa-lg"><span class="label">Email</span></a></li>
+							<li><a href="mailto:bhise.m@northeastern.edu" class="icon fa-envelope-o fa-lg"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Template: <a href="https://html5up.net/spectral"> SPECTRAL</a></li><li>From: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
