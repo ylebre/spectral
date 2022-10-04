@@ -1,1 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mayur Bhise::Portfolio Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="icon" href="images/favicon.ico">
+	</head>
+	<body>
 
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Mayur Bhise</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="index.html#projects">Projects</a></li>
+											<li><a href="index.html#about">About</a></li>
+											<li><a href="index.html#contact">Contact</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>G.R.A.S.P.</h2>
+							<h4>Grip Rectifying Assistive Sensor Pen</h4>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<div class="row">
+
+									<div class="6u 12u$(medium)">
+										<h3>About the Project</h3>
+                    								<p>Handwriting is a vital skill essential for everyday communication. Although it comes easily and naturally for most, proper handwriting posture can be difficult for many people, especially young children to learn. We aim to design an assistive technology that allows a user to receive live feedback on their writing posture through the use of sensors at key points of the writing process. We hope through this device, a user will be able to learn proper handwriting posture independently or in a classroom setting</p>
+										<p>Our idea to design this assistive device came from reaching out to teachers from Damascus Elementary School, a kindergarten through eighth grade school in Damascus, Pennsylvania. We were able to identify a kindergarten girl in the school’s special education class who has difficulties holding onto writing objects. Her lack of fine motor skills was so severe that her teacher had to physically hold her hand anytime she was required to write</p>
+									</div>
+
+									<div class="6u$ 12u$(medium)">
+										<span class="image right"><img src="images/grasp.png" alt="GRASP Prototype" /></span>
+									</div>
+
+								</div>
+
+								<hr />
+
+								<!-- <div class="inner"> -->
+									<h3 align="left">Skills Involved</h3>
+									<ul>
+										<li align="left">Matlab</li>
+										<li align="left">Data Visualization</li>
+										<li align="left">3d prototyping</li>
+										<li align="left">Ergonomics</li>
+										<li align="left">Case Study</li>
+										<li align="left">Sensor Fusion</li>
+										<li align="left">Arduino Programming</li>
+										<!-- <li align="left">C++</li> -->
+									</ul>
+								<!-- </div> -->
+
+								<hr />
+
+								<h3 align="left">Procedure</h3>
+
+								<!-- <div class="inner"> -->
+									<p>Although there are many different ways to hold a pencil that are deemed appropriate, the most common one typically taught in school is the tripod grip. Developmentally, children begin grasping objects with immature grips, such as a fisted grip or using all their fingers on a pencil. As they get older, they transition into what is known as a tripod grip. This consists of the pencil resting on the middle finger, and the thumb and index finger supporting the pencil on each side. This results in a comfortable grip with precise control of the pencil. The fingers control the movement of the pencil, removing any strain that would be on the wrist or arm.</p>
+									<p>These components come together with our 3D printed parts to form our G.R.A.S.P device <span class="image right"><img src="images/grasp wiring.png" alt="SRGAN architecture" /></span>We used ThingSpeak, an IoT (Internet of Things) analytics platform to visualize and analyze the data we acquired from the sensors. ESP32 is a wifi module that can implement TCP/IP among other protocols. It can act as both client and server. In our application, we use ESP32 as the client and ThingSpeak as the server. ESP32 reads Sensor Values in the form of analog readings, parses them into the required format  which can be a MQTT topic, JSON or CSV files and posts these values to ThingSpeak using WRITE API KEYS. Each Sensor has a “field” allotted to it where the values are plotted against time. All this data is stored in a unique  private channel which can be made public if required. ThingSpeak improves accessibility which is the most important factor for any Assistive Technology. The occupational therapist does not have to be present in person to analyze the child’s handwriting and can go back to the data at a later time  to analyze it and come up with better suggestions or methods to improve the child’s handwriting. Another advantage is that ThingSpeak allows you to collaborate with multiple apps or softwares like MATLAB and social media platforms which gives you a variety of options to visualize, analyze and share the data. </p>
+
+								<!-- </div> -->
+
+								<div class="row">
+									<div class="6u 12u$(medium)">
+										<p>G.R.A.S.P was successfully able to carry out the two main tasks outlined at the beginning of the project. Our prototype is capable of live measurements of finger positioning, finger to pen force, and finger to paper force, the three main components of proper handwriting posture. In addition the prototype also has the ability to take those measurements and both report them back in real time to the user and to an online resource for recording</p>
+										<p>Other future works regarding this project includes, designing the pen to be more ergonomic to be comfortable while writing during long sessions, so as the user does not experience fatigue, also we’d like to share the data with occupational therapist’s working on the same problem, to be better able for understanding the results, and testing it with kids having motor function disability having difficulty with writing, implementing handwriting recognition to get an accuracy score for the targeted goal of handwriting.
+	                      Overall, the  project proved to be an informative study into assistive technologies and handwriting skills. The prototype design is a solid base with the potential to fleshed out further in a variety of ways. Our group believes that if our design continues to expand, it has the potential to grow into a standalone product with the ability to impact many people. </p>
+									</div>
+
+									<div class="6u$ 12u$(medium)">
+										<span class="image fit"><img src="images/ini_mode_grasp.png" alt="initialization mode" /></span>
+										<span class="image fit"><img src="images/force_grasp.jpg" alt="Results_left_hand" /></span>
+									</div>
+								</div>
+
+
+								<hr />
+
+
+
+							</div>
+						</section>
+					</article>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://github.com/mayb1998/" target="blank" class="icon fa-github fa-lg"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/mayur-bhise" target="blank" class="icon fa-linkedin fa-lg"><span class="label">Email</span></a></li>
+							<li><a href="mailto:bhise.m@northeastern.edu" class="icon fa-envelope-o fa-lg"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Template: <a href="https://html5up.net/spectral"> SPECTRAL</a></li><li>From: <a href="http://html5up.net">HTML5 UP</a></li>						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
