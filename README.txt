@@ -1,52 +1,30 @@
-Spectral by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Mayur Bhise - Robotics and AI Engineer
+Welcome to my GitHub repository! I'm Mayur Bhise, a passionate Robotics and AI engineer with a commitment to innovation and problem-solving. My journey in the world of technology and engineering has been guided by a relentless pursuit of excellence. Here, you'll find a collection of my projects, each a testament to my skills and dedication.
+
+About Me
+🎓 Education: I'm currently pursuing a Master of Science in Robotics at Northeastern University in Boston, with a stellar GPA of 3.6/4.0. My coursework has equipped me with expertise in Advanced Control Systems, Reinforcement Learning, Robot Sensing and Navigation, Computer Vision and more.
+
+🤖 Skills: My technical toolbox includes programming languages like Python, C++, and MATLAB, as well as a wide array of libraries and tools such as TensorFlow, PyTorch, ROS, and AWS SageMaker. I'm well-versed in both software and hardware aspects of robotics.
+
+Professional Experience
+🔬 Research & Development Co-op: At Waters Corporation, I played a pivotal role in implementing Model Predictive Control (MPC) for LCMS pump systems and developed prototypes for next-gen LC systems. My work also involved intelligent features using Protopie, Solidworks, and 3D printing.
+
+🌐 System Engineer: During my tenure at Tata Consultancy Services, I optimized automotive part designs, conducted data analysis, and achieved significant cost savings through strategic decision-making.
+
+🤖 Autonomy Engineer: At Force Motors Ltd, I contributed to the development of autonomous robots, sensor fusion algorithms, NLP models, and full product lifecycle management.
+
+🔍 Research & Development Intern: My internship at Force Motors involved cutting-edge work in semantic segmentation, defect detection, and coolant usage reduction.
+
+Academic Projects
+🚗 SLAM on NUANCE Car: I successfully operated SLAM via ORB-SLAM 3 and Lego-LOAM on the NUANCE autonomous car, showcasing my expertise in robotics and perception.
+
+🖋️ G.R.A.S.P - Assistive Sensor Pen: I designed and manufactured an assistive pen to aid those with motor control issues, demonstrating my commitment to accessible technology.
+
+Connect with Me
+Feel free to explore my projects, and don't hesitate to connect with me on LinkedIn (https://www.linkedin.com/mayur-bhise) or reach out via email at bhise.m@northeastern.edu. Let's collaborate and innovate together!
 
 
-A big, modern, blocky affair with a mobile-style menu, fully responsive styling,
-and an assortment of pre-styled elements. So, pretty much what you were expecting
--- except, of course, for how it's put together, specifically:
-
-- It's built on Skel 3*, a leaner, more modular rewrite of my responsive framework.
-
-  (* = still in development as of this writing)
-
-- It uses flexbox*, which eliminates all kinds of terrible hacks and clunky layout
-  stopgaps (like CSS grid systems).
-
-  (* = not supported on IE8/9, but non-flexbox fallbacks are included)
-
-- It uses Sass* a lot more intelligently, thanks in part to several new mixins
-  and functions I've been working on (as well as a few by @HugoGiraudel).
-
-  (* = still entirely optional if you prefer vanilla CSS :)
-
-- A ton of other stuff.
-
-In short, Spectral's the culmination of several new things I'm working on/trying out,
-so please, let me know what you think :)
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-n33.co @n33co dribbble.com/n33
 
 
-Credits:
 
-	Demo Images:
-		Unsplash (unsplash.com)
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
