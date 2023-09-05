@@ -95,41 +95,8 @@
 									</div>
 								</div>
 
-								<hr />
 
-								<div class="row">
-									<div class="6u 12u$(medium)">
-										<h3>A* Search Algorithm</h3>
-										<p>The <b><a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="blank" > A* algorithm</a></b> is a popular AI search algorithm for robot motion planning. The project focused on developing an "online" variant, which could only observe adjacent cells, to allow the simulated robot to plan as it moved. The challenge was to formulate an optimized distance formula and heuristic algorithm, two of the biggest design considerations with A*, to navigate a 2D field with obstacles. The graphic shows the results of the algorithm circumnavigating an arbitrary barrier setup with ease. </p>
-
-										<p>Once A* had planned the path, an IK (Inverse Kinematic) motion controller was implemented to drive an imaginary puck-style robot along the route. Many challenges had to be overcome, including tuning the controller to account for dynamic considerations (e.g. max velocity and acceleration constraints).</p>
-
-										<p>Get the code <b><a href="https://github.com/mayB1998/Machine-Learning/tree/main/code/astar" target="blank" > here</a></b>.</p>
-
-									</div>
-									<div class="6u$ 12u$(medium)">
-										<span class="image fit"><img src="images/mlai2.png" alt="My A* algorithm navigating around obstacles" /></span>
-									</div>
-								</div>
-
-								<hr />
-
-								<div class="row">
-									<div class="6u 12u$(medium)">
-										<span class="image fit"><img src="images/mlai3.gif" alt="Particle filter correctly tracking the groundtruth" /></span>
-									</div>
-									<div class="6u$ 12u$(medium)">
-										<h3>Monte Carlo Localization</h3>
-										<p><b><a href="https://en.wikipedia.org/wiki/Monte_Carlo_localization" target="blank" >Monte Carlo Localization</a></b> (MCL) is a powerful localization algorithm. At the core of MCL is a particle filter, a non-parametric approximation of a Bayesian filter (<i>e.g.</i> Kalman). Particle filters represent the robot's posterior by particles, or individual <i>possible</i> states of the robot.</p>
-
-										<p>The accompanying animation shows the particle filter I implemented (blue line) correctly tracking the ground truth path (green line). For reference, the purely dead-reckoned path is shown in red. Looking very closely at the forefront of the blue path, you can make out the particle cloud (black arrows), although they're hard to distinguish due to their density - there are 500 in close quarters. If you observe closely, you'll see the particles splay out each step, and those towards the edge of the cloud eventually disappear after the resampling step.</p>
-
-										<p>Localization techniques such as this are at the core of SLAM and autonomous navigation technology, and implementing one from scratch was a great learning experience!</p>
-
-										<p>Check out the implementation <b><a href="https://github.com/mayB1998/Machine-Learning/tree/main/code/mcl" target="blank" > here</a></b>.</p>
-
-									</div>
-								</div>
+				
 
 								<hr />
 
@@ -138,7 +105,7 @@
 										<h3> Lane Finding</h3>
 										<p>This Project involves python and OpenCV to develop an analytical pipeline that can be ued to automate the lane line detection in image and movie files</p>
 
-										<p>The project was structured accordingly :Building the Vision Pipeline consisting of gaussian Bblurring, defining areas of interest, graysacling to detect sharp transitions, along with canny edge detection, to detect patterns, features in an image by thresholding the pisel densities, along with Hough line transfrom to accurately mask the areas of interest, the model was then tested on both images and a set of videos with frames at 30 fps, with a industry standard accuracy</p>
+										<p>The project was structured accordingly :Building the Vision Pipeline consisting of gaussian blurring, defining areas of interest, graysacling to detect sharp transitions, along with canny edge detection, to detect patterns, features in an image by thresholding the pisel densities, along with Hough line transfrom to accurately mask the areas of interest, the model was then tested on both images and a set of videos with frames at 30 fps, with a industry standard accuracy</p>
 
 										<p>Get the code <b><a href="https://github.com/mayB1998/Self-Driving-Car-Algorithms/tree/main/CarND-LaneFinding" target="blank" > here</a></b>.</p>
 
