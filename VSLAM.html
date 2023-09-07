@@ -90,7 +90,7 @@
 									<p>The initial system setup for any project was to setup the car for collecting data using ROS on linux platform, where I collected the data for the nodes required for performing visual slam, and then I drove the car around an approximate circle in the BOSTON City area to get a loop closure, which are really important to get acccurate maps of the environment without any scale drift.</p>
 									<p>The data collected was preprocessed and extracted to get raw images for the Visual slam case, then I created a visual odometry pipeline in python using various feature descriptors such as ORB, FAST, SIFT and compared the performance for all of htem, first with the publicly available KITTI dataset and then with the real data collected</p>
 									<p>The pipeline performed well with the KITTI Dataset, because it was collected in ideal conditions without any other moving objects, but when I ran it on the dataset I collected it broke several times areas where the vehicle stopped at traffic stops and other cars were moving at relatively different speeds comapred to us, so I had to implement some heuristics to get it perform well, so I used Gaussian Filtering, image cropping whent he vehicle is stationary to avoid the moving vehicles, which gave satisfactory results </p>
-									<span class="image left"><img src="images/vslam.jpg" alt="navigating an obstacle" /></span>
+									<div class="image left"><img src="images/vslam.jpg" alt="navigating an obstacle" /></div>
 
 									<hr />
 									<h4>SLAM &amp; Autonomous Navigation</h4>
