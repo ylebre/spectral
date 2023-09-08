@@ -70,13 +70,14 @@
 									</div>
 									<div class="6u$ 12u$(medium)">
 										<h3>Full Frame Segmentation using SegFormers</h3>
-										<p>This Project was based on developing a Full Frame segmentation module using Vision Transformers, based on the paper https://arxiv.org/abs/2105.15203, Transformer based architecture helps in paying attention to every region in the image, as seen from the attention maps, this allows them to be robust than previous CNN based models, and the mIoU is also far better than with previous approcahes </p>
+										<p>This Project involved developing a Full Frame segmentation module using Vision Transformers, based on the paper <a href="https://arxiv.org/abs/2105.15203">Segformer: Simple and Efficient Design for Semantic Segmentation with Transformers</a>, Transformers have multiple attention heads, in contrast to CNN based architecture, which concentrate on local attention, these multiple heads in various stages pay attention to every region in the image, as seen from the attention maps, and the mIoU is also far better than with previous approaches </p>
 
-									  <p>Seggformers is a very revoultionary algorithm in the field of segmentation, here is the link to my medium blog, if you'd like to learn more about the components and working of the algorithm, here is the code</p>
+									  <p>Segformers is a very revolutionary algorithm in the field of segmentation, here is the link to my medium blog, if you'd like to learn more about the components and working of the algorithm</p>
 										<p>Get the code <b><a href="https://github.com/mayB1998/Computer Vision/tree/main/Segmentation" target="blank" > here</a></b>.</p>
 
 									</div>
 								</div>
+
 								
               							  <hr />
 
@@ -103,7 +104,7 @@
 										<h3>Object Detection and Depth Mapping</h3>
 										<p>Camera is the most reliable sensor for Perception and Computer Vision, and with it we can, get a sufficient understanding to navigate through the environment, in this project we will discuss how we can perform mutiple perception tasks through the stereo camera, if we calibrate the cameras accurately and have good weather conditions, we can get near perfect measurements from the sensor, which reduces the dependency on other sensors, lets discuss what are the steps involved in the project</p>
 
-									  <p>The Project starts with collecting Data from the camera, I have also collected data from my oakD stero camera, for this purpose, for all computer vision tasks the camera needs to be calibrated, after that we import the images, and recify them if any distortion is still present, and calculate disparity in the image, which is basically difference in Pixel brightness, and with some linear algebra magic, we are able to calculate projection matrix which helps us in depth mapping, and using yolo v4(object detection library) we can put the objects in bouding boxes, and we can add distances to the bounding boxes, which we aquire form the depth mapping, thus creating a robust computer vision pipeline, which can be further enhanced to include 3d reconstruction </p>
+									  <p>The Project starts with collecting Data from the camera, I have also collected data from my oak-D stero camera, for this purpose, for all computer vision tasks the camera needs to be calibrated, after that we import the images, and recify them if any distortion is still present, and calculate disparity in the image, which is basically difference in Pixel brightness, and with some linear algebra magic, we are able to calculate projection matrix which helps us in depth mapping, and using yolo v4(object detection library) we can put the objects in bouding boxes, and we can add distances to the bounding boxes, which we aquire form the depth mapping, thus creating a robust computer vision pipeline, which can be further enhanced to include 3d reconstruction </p>
 										<p>Get the code <b><a href="https://github.com/mayB1998/Self-Driving-Car-Algorithms/tree/main/CarND-Traffic-Sign-Classifier-Project" target="blank" > here</a></b>.</p>
 
 									</div>
