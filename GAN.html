@@ -80,7 +80,7 @@
 
 								<!-- <div class="inner"> -->
 									<p>The images were extracted from the publicly available dataset div2k which has 25 thousand images for training, the images were of random size, so first steps were to preprocess the images and convert them in an uniform size of 64*64 and the create a ImageDatasetGenerator using keras library, the architecture of the network was deep for a GAN network because the network had to learn low level features to generate features while upsacling, the architecture consisted of resnets with skip connection to avoid vanishing gradient</p>
-									<p>The GAN network mostly comprised of convolution layers, batch normalization and parameterized ReLU (PRelU). <span class="image right"><img src="images/srgan_map.png" alt="SRGAN architecture" /></span>The generator also implements skip connections similar to ResNet. The convolution layer with “k3n64s1” stands for 3x3 kernel filters outputting 64 channels with stride 1.</p>
+									<p>The GAN network mostly comprised of convolution layers, batch normalization and parameterized ReLU (PRelU). <span class="image fit"><img src="images/srgan_map.png" alt="SRGAN architecture" /></span>The generator also implements skip connections similar to ResNet. The convolution layer with “k3n64s1” stands for 3x3 kernel filters outputting 64 channels with stride 1.</p>
 									<ul>
 										<li align="left">16 residual blocks in generator network</li>
 										<li align="left">output size of 256*256</li>
